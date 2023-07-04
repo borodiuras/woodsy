@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index_style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+
+    <title>WoodsyBox – convert your MPV into mini camper!</title>
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo"><a href="index.html">WoodsyBox</a></h2>
+        <div class="toggle"></div>
+        <!--- toggle is for menu --->
+      </header>
+      <div class="wrapper">
+        <div class="featured">
+          <video
+            class="mpeg"
+            src="/files/20230510_203715.mp4" -->
+            muted
+            loop
+            autoplay
+          ></video>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Convert your MPV into mini camper!</h2>
+        <!-- <h3>gained time</h3> -->
+        <p>
+          WoodsyBox lets you to convert your Multi Purpose Vehicle (MPV) into a
+          mini camper. It has all you need for a comfy weekend escape – gas
+          burner, fridge, running water, ample space for storage and fold-out
+          bed for two! Designed to fit in most MPVs bootspace it still leaves
+          rear seat for passenger use.
+        </p>
+        <button type="button" class="collapsible">Compatible models</button>
+        <div class="content">
+          <ul>
+            <li>Citroen Berlingo</li>
+            <li>Dacia Dokker</li>
+            <li>Fiat Doblo</li>
+            <li>Ford Transit Connect</li>
+            <li>Peogeot Partner</li>
+            <li>Renault Kangoo</li>
+            <li>VW Caddy</li>
+          </ul>
+      </div>
+
+      <!-- <ul class="social">
+        <li>
+          <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" /></a>
+        </li>
+      </ul> -->
+    </section>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="process.html">order</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+      const featured = document.querySelector(".featured");
+      const wrapper = document.querySelector(".wrapper");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+        featured.classList.toggle("active");
+        wrapper.classList.toggle("active");
+      });
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+    </script>
+  </body>
+</html>
